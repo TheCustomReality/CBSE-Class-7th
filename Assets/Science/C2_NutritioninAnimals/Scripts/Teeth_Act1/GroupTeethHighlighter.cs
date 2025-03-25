@@ -7,6 +7,9 @@ public class GroupTeethHighlighter : MonoBehaviour
     [Header("Assign Tooth GameObjects Here")]
     public List<GameObject> teethToHighlight;
 
+    public Dialogue dialogue;
+    public Ath3na athena; 
+
     [Header("Highlight Settings")]
     public Material outlineMaterial; // Shader material for outline effect
     public float highlightDuration = 2f; // Duration for which the highlight remains
@@ -44,6 +47,8 @@ public class GroupTeethHighlighter : MonoBehaviour
                 }
             }
         }
+
+        athena.Speak(dialogue);
         yield return new WaitForSeconds(highlightDuration);
         RemoveHighlight();
     }

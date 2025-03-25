@@ -13,12 +13,7 @@ public class GroupTeethManager : MonoBehaviour
     [Header("Delay Between Highlights")]
     public float delayBetweenGroups = 1f; // Extra delay between each group
 
-    void Start()
-    {
-        StartCoroutine(HighlightTeethSequence());
-    }
-
-    private IEnumerator HighlightTeethSequence()
+    public IEnumerator HighlightTeethSequence()
     {
         yield return StartCoroutine(incisorsHighlighter.HighlightTeeth());
         // incisorsHighlighter.RemoveHighlight();
