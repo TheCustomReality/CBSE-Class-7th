@@ -5,40 +5,18 @@ using TMPro;
 
 public class Ath3na : MonoBehaviour
 {
-    private bool active;
-    public List<Dialogue> dialogues = new List<Dialogue>();
+    
     public AudioSource audioSource;
     public Animator animator;
     public TextMeshProUGUI captionText; // For UI caption display
     public float captionDisplayTime = 5f; // Duration to show text
-
-    public void Speak(string dialogueName)
+    bool active = false;
+    public void Speak(Dialogue dialogue)
     {
-        // Find the dialogue with the specified name
-        Dialogue dialogue = dialogues.FirstOrDefault(d => d.id == dialogueName);
-
-        if (dialogue != null)
-        {
-            Debug.Log(dialogue.dialogText);
-
-            // Play the audio if available
-            if (audioSource != null && dialogue.dialogAudioClip != null)
-            {
-                audioSource.clip = dialogue.dialogAudioClip;
-                audioSource.Play();
-            }
-
-            // Display the caption
-            if (captionText != null)
-            {
-                StopAllCoroutines(); // Ensure previous captions are cleared
-                StartCoroutine(DisplayCaption(dialogue.dialogText));
-            }
-        }
-        else
-        {
-            Debug.LogWarning($"Dialogue with name '{dialogueName}' not found.");
-        }
+        audioSource.clip = dialogue._dialogAudioClip;
+        audioSource.Play();
+        //Dispy caption
+        
     }
 
     private System.Collections.IEnumerator DisplayCaption(string text)
