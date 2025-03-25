@@ -1,0 +1,34 @@
+{
+    "name": "XRSettingsbutton",
+    "maps": [
+        {
+            "name": "XRControllerMenu",
+            "id": "55b75cee-9a3f-42ba-904a-bd2dff2e0083",
+            "actions": [
+                {
+                    "name": "Settings",
+                    "type": "Button",
+                    "id": "0b630af2-40cb-433f-9998-4540c664bb89",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "049a45ce-2a29-4ce0-bdfe-0e5f63b0e11d",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Settings",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
