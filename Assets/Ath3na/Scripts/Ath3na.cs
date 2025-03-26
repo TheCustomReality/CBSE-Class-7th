@@ -52,6 +52,7 @@ public class Ath3na : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         animator.SetTrigger("Idel");
+        speaking= false;
     }
 
     public void MoveAth3na(Transform transform)
