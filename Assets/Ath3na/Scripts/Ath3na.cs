@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -7,45 +9,73 @@ public class Ath3na : MonoBehaviour
 {
     
     public AudioSource audioSource;
-    public Animator animator;
-    public TextMeshProUGUI captionText; // For UI caption display
-    public float captionDisplayTime = 5f; // Duration to show text
-    bool active = false;
+    public Animator animator; 
+    private bool speaking = false;
+    [SerializeField] private Ath3naSpwaner _spwaner;
+    public bool test = false ;
+
+    private void Update()
+    {
+        if (test)
+        {
+            Despawn();
+            test = false;
+        }
+    }
     public void Speak(Dialogue dialogue)
     {
-        audioSource.clip = dialogue._dialogAudioClip;
-        audioSource.Play();
-        //Dispy caption
-        
-    }
-
-    private System.Collections.IEnumerator DisplayCaption(string text)
-    {
-        captionText.text = text;
-        yield return new WaitForSeconds(captionDisplayTime);
-        captionText.text = ""; // Clear text after duration
-    }
-
-    public void Spawn(Transform spawnLocation)
-    {
-        if (!active)
+        if (speaking)
         {
-            transform.position = spawnLocation.position;
-            transform.rotation = spawnLocation.rotation;
-            gameObject.SetActive(true);
-            active = true;
-            Debug.Log("Ath3na has spawned at the target location.");
+            return;
         }
+        else
+        {
+            speaking = true;
+            audioSource.clip = dialogue._dialogAudioClip;
+            audioSource.Play();
+            //Display Captions
+            //working on it.
+            
+            //Play Animation
+            if (animator)
+            {
+                string trigger = "talk";
+                int randomInt = UnityEngine.Random.Range(1, 2 + 1);
+                trigger += randomInt.ToString();
+                animator.SetTrigger(trigger);
+                StartCoroutine(waitforSpeaking(dialogue._dialogAudioClip.length));
+            }
+        }
+    }
+
+    private IEnumerator waitforSpeaking(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        animator.SetTrigger("Idel");
+    }
+
+    public void MoveAth3na(Transform transform)
+    {
+        _spwaner.DespawnObject();
+        StartCoroutine(waitTillDespawn(transform));
+    }
+
+    private IEnumerator waitTillDespawn(Transform transform)
+    {
+        yield return new WaitForSeconds(_spwaner.transitionTime);
+        gameObject.transform.position = transform.position;
+        gameObject.transform.rotation = transform.rotation;
+        _spwaner.SpawnObject();
+    }
+    
+    public void Spawn()
+    {
+        _spwaner.SpawnObject();
     }
 
     public void Despawn()
     {
-        if (active)
-        {
-            gameObject.SetActive(false);
-            active = false;
-            Debug.Log("Ath3na has despawned.");
-        }
+        _spwaner.DespawnObject();
     }
 
     public void PlayAnimation(string animationName)
@@ -53,7 +83,6 @@ public class Ath3na : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger(animationName);
-            Debug.Log($"Playing animation: {animationName}");
         }
         else
         {
