@@ -17,11 +17,6 @@ public class Act1Manager : MonoBehaviour
     }
 
     public List<ToothHighlight> toothHighlights = new List<ToothHighlight>();
-
-    // private void Start()
-    // {
-    //     StartCoroutine(PlayAct1Sequence());
-    // }
     
     public IEnumerator PlayAct1Sequence()
     {

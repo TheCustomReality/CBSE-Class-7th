@@ -42,8 +42,14 @@ public class ActivityManager : MonoBehaviour
     
     private IEnumerator Act2()
     {
-        Debug.Log("Act2");
-        yield return new WaitForSeconds(5);
+        act2.SetActive(true);
+        Act2Manager _act2Manager = act2.GetComponent<Act2Manager>();
+        if (_act2Manager)
+        {
+            yield return StartCoroutine(_act2Manager.StartAct2());
+        }
+        //Start Despwaning sycence 
+        act2.SetActive(false);
     }
     
     private IEnumerator Act3()
