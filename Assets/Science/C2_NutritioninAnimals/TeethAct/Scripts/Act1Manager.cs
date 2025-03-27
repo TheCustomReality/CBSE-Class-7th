@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,16 +18,16 @@ public class Act1Manager : MonoBehaviour
 
     public List<ToothHighlight> toothHighlights = new List<ToothHighlight>();
 
-    private void Start()
-    {
-        StartCoroutine(PlayAct1Sequence());
-    }
-
-    private IEnumerator PlayAct1Sequence()
+    // private void Start()
+    // {
+    //     StartCoroutine(PlayAct1Sequence());
+    // }
+    
+    public IEnumerator PlayAct1Sequence()
     {
         // Play intro narration
         ath3na.Speak(startDialogue);
-        yield return new WaitForSeconds(startDialogue._dialogAudioClip.length);
+        yield return new WaitForSeconds(startDialogue._dialogAudioClip.length + 3f);
 
         // Go through each tooth group dynamically
         foreach (var tooth in toothHighlights)
@@ -39,6 +40,6 @@ public class Act1Manager : MonoBehaviour
     private IEnumerator HighlightAndSpeak(GroupTeethHighlighter highlighter, Dialogue dialogue)
     {
         ath3na.Speak(dialogue); // Start speaking
-        yield return StartCoroutine(highlighter.HighlightTeeth(dialogue._dialogAudioClip.length)); // Highlight teeth while talking
+        yield return StartCoroutine(highlighter.HighlightTeeth(dialogue._dialogAudioClip.length + 3f)); // Highlight teeth while talking
     }
 }

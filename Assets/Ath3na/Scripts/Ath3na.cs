@@ -39,7 +39,7 @@ public class Ath3na : MonoBehaviour
             //Play Animation
             if (animator)
             {
-                string trigger = "talk";
+                string trigger = "Talk";
                 int randomInt = UnityEngine.Random.Range(1, 2 + 1);
                 trigger += randomInt.ToString();
                 animator.SetTrigger(trigger);

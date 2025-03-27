@@ -58,15 +58,17 @@ public class SocketInteractorOutline : MonoBehaviour
         // Determine outline color based on tag
         if (placedObject.CompareTag(correctTag))
         {
-            if (correctAudio != null)
+            if (correctAudio)
             {
+                //This is correct attempt
                 correctAudio.Play();
             }
         }
         else
         {
-            if (incorrectAudio != null)
+            if (incorrectAudio)
             {
+                //This is incorrect attempt
                 incorrectAudio.Play();
             }
         }
