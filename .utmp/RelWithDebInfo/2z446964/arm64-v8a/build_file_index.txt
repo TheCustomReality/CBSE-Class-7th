@@ -1,0 +1,2 @@
+/Users/rajanhasija/Developer/TCR Work/CBSE-Class-7th/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/rajanhasija/Developer/TCR Work/CBSE-Class-7th/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
