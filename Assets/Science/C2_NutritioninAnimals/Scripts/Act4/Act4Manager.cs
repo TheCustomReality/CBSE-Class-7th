@@ -6,9 +6,10 @@ public class Act4Manager : MonoBehaviour
     public Ath3na ath3na;
     public Dialogue startDialogue;
     public Dialogue endDialogue;
+    public Dialogue[] organDialogues; // Array for organ placement prompts
     
     [SerializeField] public static int CorrectPlacement = 0;
-    public int totalOrgans = 8; // 7 organs to place
+    public int totalOrgans = 8; // Total organs to place
 
     private void OnEnable()
     {
@@ -29,6 +30,12 @@ public class Act4Manager : MonoBehaviour
 
     private IEnumerator coreLoopAct4()
     {
-        yield return new WaitUntil(() => CorrectPlacement >= totalOrgans-1);
+        for (int i = 0; i < totalOrgans; i++)
+        {
+            ath3na.Speak(organDialogues[i]);
+            yield return new WaitForSeconds(organDialogues[i]._dialogAudioClip.length);
+            
+            yield return new WaitUntil(() => CorrectPlacement > i);
+        }
     }
 }
