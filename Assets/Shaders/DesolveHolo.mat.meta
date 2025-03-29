@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 9d729d881e8d1ba40be0119c99faaff3
+<<<<<<<< Updated upstream:Assets/Shaders/DesolveHolo.mat.meta
+guid: 9c05ddaef00ff3140971a4677acaf570
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
+========
+guid: 2dafe927e1e528c46a089865e3da2239
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> Stashed changes:Assets/Science/C2_NutritioninAnimals/Audio/Act2.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

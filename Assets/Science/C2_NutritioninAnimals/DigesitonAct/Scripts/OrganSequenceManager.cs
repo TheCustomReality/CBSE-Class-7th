@@ -85,8 +85,7 @@ public class OrganSequenceManager : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-
-        Debug.Log("Organ Locked in Place: " + interactable.gameObject.name);
+        
     }
 
     private void UpdateCurrentOrganText()

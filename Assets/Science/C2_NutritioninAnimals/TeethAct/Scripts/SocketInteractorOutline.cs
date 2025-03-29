@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class SocketInteractorOutline : MonoBehaviour
 {
@@ -38,6 +40,24 @@ public class SocketInteractorOutline : MonoBehaviour
             socketInteractor.selectExited.RemoveListener(OnObjectRemoved);
         }
     }
+    
+    private IEnumerator LockOrganInSocket(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable, GameObject socket)
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        interactable.transform.SetParent(socket.transform);
+        interactable.enabled = false;
+
+        Rigidbody rb = interactable.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        
+    }
 
     private void OnObjectPlaced(SelectEnterEventArgs args)
     {
@@ -58,15 +78,28 @@ public class SocketInteractorOutline : MonoBehaviour
         // Determine outline color based on tag
         if (placedObject.CompareTag(correctTag))
         {
-            if (correctAudio != null)
+            if (correctAudio)
             {
+                //This is correct attempt
+                Act2Manager.CorrectPlacement++;
+                StatsManager._StatsManager.score += 10;
                 correctAudio.Play();
+                //Disable XRGrabInteractable compontnet
+                // XRGrabInteractable interactable = placedObject.GetComponent<XRGrabInteractable>();
+                // if (interactable)
+                // {
+                //     Debug.Log("Disabled");
+                //     interactable.enabled = false;
+                // }
             }
         }
         else
         {
-            if (incorrectAudio != null)
+            if (incorrectAudio)
             {
+                //This is incorrect attempt
+                StatsManager._StatsManager.score -= 2;
+                StatsManager._StatsManager.incorrectPlacementAct2++;
                 incorrectAudio.Play();
             }
         }
