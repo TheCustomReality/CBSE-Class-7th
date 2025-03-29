@@ -68,7 +68,14 @@ public class SocketInteractorOutline : MonoBehaviour
         }
 
         GameObject placedObject = args.interactableObject.transform.gameObject;
+        ToothGrabListener toothGrabListener = placedObject.GetComponent<ToothGrabListener>();
+
         MeshRenderer objectRenderer = placedObject.GetComponent<MeshRenderer>();
+
+        if (toothGrabListener != null)
+        {
+            toothGrabListener.SetPlaced(true); // ✅ Mark tooth as placed
+        }
 
         if (objectRenderer == null)
         {
