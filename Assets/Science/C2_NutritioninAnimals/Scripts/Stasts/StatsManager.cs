@@ -6,7 +6,6 @@ public class StatsManager : MonoBehaviour
     //Task of this sricp is to house various data that needs to be shared at the end of the module
     // 1.Time taken to perform the activtiys
     // 2.Amount of foucs
-    // 3. Score : correct attampt = +10 , wrong attampt = -5 
     
     public static StatsManager _StatsManager { get; private set; }
 
