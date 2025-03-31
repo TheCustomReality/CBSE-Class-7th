@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 42d68901e9e21a441bf66c363d00ea44
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 307824
+  packageName: Emo Robot 01
+  packageVersion: 1.0
+  assetPath: Assets/GrigoriyArx/DrollRobots/Scripts/Rob10Ctrl.cs
+  uploadId: 723874
