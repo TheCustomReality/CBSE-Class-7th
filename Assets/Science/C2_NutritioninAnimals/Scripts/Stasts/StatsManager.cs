@@ -10,14 +10,14 @@ public class StatsManager : MonoBehaviour
     public static StatsManager _StatsManager { get; private set; }
 
     public int score = 0;
-    public int act2time = 0;
+    public float act2time = 0;
     public int incorrectPlacementAct2 = 0;
-    public int act4time = 0;
+    public float act4time = 0;
     public int incorrectPlacementAct4 = 0;
     
     //Amount of foucs 
-    public int act1focus = 0;
-    public int act3focus = 0;
+    public float act1focus = 0;
+    public float act3focus = 0;
     
     
     

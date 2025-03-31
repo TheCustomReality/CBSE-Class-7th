@@ -22,6 +22,7 @@ public class ActivityManager : MonoBehaviour
     
     private IEnumerator StartActivity()
     {
+        yield return new WaitForSeconds(5f);
         yield return Act1();
         yield return Act2();
         yield return Act3();

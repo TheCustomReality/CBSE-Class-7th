@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SceneList/Other/HandAnimationData.unity
     guid: 88a52c72411de4e67858a308a83abecc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Science/C2_NutritioninAnimals/ClinicScene.unity
     guid: e5eaa92b1a9e1844e8197de419a0320c
   - enabled: 0
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SceneList/Science/Chapter2/Rajan-AudioScene.unity
     guid: fb69c7459dcd94e10ba52d3276d8e2a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Science/C2_NutritioninAnimals/ClinicScene 1.unity
     guid: 954c5f59e64214f7ea6d458e5b27e906
   m_configObjects:

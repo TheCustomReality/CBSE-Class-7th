@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5708188c735494880aa82ba219a674fc
+guid: ebad80994dcac48199285d6409e7e5bb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Teeth.001
-    second: {fileID: 2100000, guid: 79599cbf43086482983c564fe903a461, type: 2}
+    second: {fileID: 2100000, guid: 6f5952fce9012418489d7fa7679cebf7, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Teeth-BaseColor
+    second: {fileID: 2800000, guid: 047b86442be314e4883bd586d0adfc10, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Teeth-Metallic
+    second: {fileID: 2800000, guid: 81034e1ad2b3d49a5ae1897b008279c8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Teeth-Normal_OpenGL
+    second: {fileID: 2800000, guid: 1fe31ea55788c44f49d4b80faa149240, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Teeth-Roughness
+    second: {fileID: 2800000, guid: db2307ae820fb4139bf6cdb8e5efedb0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
