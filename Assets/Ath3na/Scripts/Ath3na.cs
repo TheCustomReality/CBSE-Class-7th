@@ -39,10 +39,7 @@ public class Ath3na : MonoBehaviour
             //Play Animation
             if (animator)
             {
-                string trigger = "Talk";
-                int randomInt = UnityEngine.Random.Range(1, 2 + 1);
-                trigger += randomInt.ToString();
-                animator.SetTrigger(trigger);
+                animator.SetTrigger("TalkStart");
                 StartCoroutine(waitforSpeaking(dialogue._dialogAudioClip.length));
             }
         }
@@ -51,7 +48,7 @@ public class Ath3na : MonoBehaviour
     private IEnumerator waitforSpeaking(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        animator.SetTrigger("Idel");
+        animator.SetTrigger("TalkEnd");
         speaking= false;
     }
 

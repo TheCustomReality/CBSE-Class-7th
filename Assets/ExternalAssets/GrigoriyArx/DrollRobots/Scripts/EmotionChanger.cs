@@ -8,6 +8,8 @@ public class EmotionChanger : MonoBehaviour
     public int currentEmotionMouthIndex = 0;
     public Renderer objectRendererEyes;
     public Renderer objectRendererMouth;
+    
+    
 
     void Start()
     {
