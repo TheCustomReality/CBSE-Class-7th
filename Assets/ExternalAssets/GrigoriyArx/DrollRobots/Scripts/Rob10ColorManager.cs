@@ -13,7 +13,7 @@ public class Rob10ColorManager : MonoBehaviour
     public bool isRainbowCycles=false;
     public bool isBattle=false;
 
-    public int ñolorIndex = 0;
+    public int ColorIndex = 0;
     public int eyesColorIndex = 1;
     public int mouthColorIndex = 2;
 
@@ -47,7 +47,7 @@ public class Rob10ColorManager : MonoBehaviour
     }
     private void UpdateColors()
     {
-        ApplyColor(ñolorIndex);
+        ApplyColor(ColorIndex);
     }
 
     private void ApplyColor( int colorIndex)
@@ -86,8 +86,8 @@ public class Rob10ColorManager : MonoBehaviour
     {
         if (newColorIndex >= 0 && newColorIndex < predefinedColors.Length)
         {
-            ñolorIndex = newColorIndex;
-            ApplyColor(ñolorIndex);
+            ColorIndex = newColorIndex;
+            ApplyColor(ColorIndex);
         }
     }
 
