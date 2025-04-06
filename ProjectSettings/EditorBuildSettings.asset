@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/SceneList/Other/HandAnimationData.unity
     guid: 88a52c72411de4e67858a308a83abecc
   - enabled: 0
-    path: Assets/Science/C2_NutritioninAnimals/ClinicScene.unity
+    path: Assets/Science/C2_NutritioninAnimals/ClinicScene-Old.unity
     guid: e5eaa92b1a9e1844e8197de419a0320c
   - enabled: 0
     path: Assets/HandAnimations/Scena/HandAnimations.unity
@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Science/C2_NutritioninAnimals/ClinicScene 1.unity
     guid: 954c5f59e64214f7ea6d458e5b27e906
   - enabled: 1
-    path: Assets/Science/C2_NutritioninAnimals/Rajan-ClinicScene.unity
+    path: Assets/Science/C2_NutritioninAnimals/ClinicScene.unity
     guid: 0c421606f7cb64317ac35779207da999
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
