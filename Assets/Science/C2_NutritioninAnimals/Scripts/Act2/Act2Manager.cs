@@ -41,6 +41,6 @@ public class Act2Manager : MonoBehaviour
 
     private IEnumerator coreLoopAct2()
     {
-        yield return new WaitUntil(() => CorrectPlacement >= 5);
+        yield return new WaitUntil(() => CorrectPlacement >= 6);
     }
 }

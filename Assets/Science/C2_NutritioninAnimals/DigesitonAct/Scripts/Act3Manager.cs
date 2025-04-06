@@ -8,10 +8,10 @@ public class Act3Manager : MonoBehaviour
 
     public Dialogue startDialogue;
 
-    void Start()
-    {
-        StartCoroutine(PlayAct3Sequence());
-    }
+    // void Start()
+    // {
+    //     StartCoroutine(PlayAct3Sequence());
+    // }
 
     [System.Serializable]
     public class OrganHighlight

@@ -10,6 +10,8 @@ public class ActivityManager : MonoBehaviour
     public GameObject act2;
     public GameObject act3;
     public GameObject act4;
+
+    public List<GameObject> teethList = new List<GameObject>();
     
     void Start()
     {
@@ -50,19 +52,34 @@ public class ActivityManager : MonoBehaviour
             yield return StartCoroutine(_act2Manager.StartAct2());
         }
         //Start Despwaning sycence 
+        foreach(var tooth in teethList)
+        {
+            tooth.SetActive(false);
+        }
         act2.SetActive(false);
     }
     
     private IEnumerator Act3()
     {
-        Debug.Log("Act3");
-        yield return new WaitForSeconds(5);
+        act3.SetActive(true);
+        Act3Manager _act3Manager = act3.GetComponent<Act3Manager>();
+        if (_act3Manager)
+        {
+            yield return StartCoroutine(_act3Manager.PlayAct3Sequence());
+        }
+        act3.SetActive(false);
     }
     
     private IEnumerator Act4()
     {
-        Debug.Log("Act4");
-        yield return new WaitForSeconds(5);
+        act4.SetActive(true);
+        Act4Manager _act4Manager = act4.GetComponent<Act4Manager>();
+        if (_act4Manager)
+        {
+            yield return StartCoroutine(_act4Manager.StartAct4());
+        }
+        //Start Despwaning sycence
+        act4.SetActive(false);
     }
     
     

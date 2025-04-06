@@ -1,10 +1,10 @@
 # ninja log v5
-5	7407	1743097494021384624	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	23d20beb2d2277f1
-3	7425	1743097494047667584	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	983edc02446feff9
-1	7618	1743097494213504070	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c651082a7b0ebad6
-11	7621	1743097494236004566	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ffc131877ca123ca
-12	8002	1743097494605913559	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7967224a48daafad
-2	8212	1743097494837925239	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ab5af923ec1ab864
-4	8686	1743097495313732284	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d9c0813e73ea2c2
-0	9169	1743097495797363092	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f1a2cfd4a7d5774
-9170	9886	1743097496496663261	/Users/rajanhasija/Developer/TCR Work/CBSE-Class-7th/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2z446964/obj/arm64-v8a/libgame.so	b0d0b5f6cf1000cd
+2	1438	1743870554981004795	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	23d20beb2d2277f1
+2	1470	1743870555014267958	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	983edc02446feff9
+1	1490	1743870555035970024	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c651082a7b0ebad6
+3	1491	1743870555037679318	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ffc131877ca123ca
+3	1554	1743870555099522846	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7967224a48daafad
+1	1591	1743870555138879308	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ab5af923ec1ab864
+2	1725	1743870555271883377	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d9c0813e73ea2c2
+0	1789	1743870555336853659	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f1a2cfd4a7d5774
+1789	1868	1743870555411697619	/Users/rajanhasija/Developer/TCR Work/CBSE-Class-7th/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2z446964/obj/arm64-v8a/libgame.so	b0d0b5f6cf1000cd
